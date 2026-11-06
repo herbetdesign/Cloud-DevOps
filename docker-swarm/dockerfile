@@ -1,0 +1,10 @@
+FROM php:8.1-apache
+
+# Instala extensão MySQLi
+RUN docker-php-ext-install mysqli
+
+# Copia aplicação
+COPY index.php /var/www/html/
+
+# Expondo porta padrão
+EXPOSE 80
